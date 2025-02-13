@@ -19,3 +19,17 @@ input{
     padding:1.5px;
 
 }
+
+label{
+}
+
+input[type=button] {
+    border: 4px;
+    background-color: #42A5F5;
+    padding-top: 2px;
+    font-size: 0.875rem;
+  font-weight: bold; 
+  color: #1a202c; 
+  border-radius: 12px;
+ 
+}
