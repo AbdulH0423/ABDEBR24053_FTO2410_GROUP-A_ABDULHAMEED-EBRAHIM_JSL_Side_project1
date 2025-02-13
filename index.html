@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Where to ride landing page</title>
+    <title>Where to ride</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/css/leaflet.css">
-    <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css">
-    <link rel="stylesheet" href="./assets/css/theme.css">
-    <link rel="stylesheet" href="./assets/css/loopple/loopple.css">
+    <link rel = "stylesheet" href = "styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,14 +20,14 @@
         }
       </script>
 </head>
-<body>
+<body class = "bg-gray-100">
 
-    <!--Heaader DIV-->
+    <!--Header DIV-->
 
-    <div class="object-center">
+    <div class="container object-center">
 
         <!--Mobile NAV menu DIV-->
-        <div class="flex justify-between">
+        <div class="flex justify-between relative">
 
 
 
@@ -40,7 +38,6 @@
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 class="h-6 w-6"
-                fill="none"
                 >
                 <g clip-path="url(#clip0_429_11066)">
                   <path
@@ -70,22 +67,29 @@
             </div>
 
             
-            <div class="md:hidden absolute flex flex-col justify-center w-full gap-4 overflow-hidden bg-white max-h-screen top-full" id="mobile_menu">
+            <div class="md:hidden absolute flex flex-col justify-center w-full gap-4 bg-white overflow-y-auto top-full" id="mobile_menu">
 
                 <div class="flex flex-col items-center justify-between text-black gap-12">
-                  <a class="" href="#what">What we offer</a>
-                  <a class="" href="#features">Safety</a>
-                  <a class="" href="#where">Where to Ride</a>
-                  <a class="" href="#Forum">Forum</a>
-                  <a class="" href="#contact_us">Contact us</a>
+                  <div class="flex flex-col gap-4">
+                    <a class="text-m text-black" href="#What-weDo">
+                      What we offer</a>
+                    <a class="text-m text-black" href="#Safety">
+                      Safety</a>
+                    <a class="text-m text-black" href="#whereToRide">
+                      Where to Ride</a>
+                    <a class="text-m text-black" href="#forum">
+                      Forum</a>
+                    <a class="text-m text-black" href="#contactUs">
+                      Contact us</a>
+                  </div>
 
                     <!--LOG IN BUTTON-->
-                    <button class="text-sm text-black-900 hover:text-dark-grey-900 hover:font-bold">
+                    <button class="text-lg text-black hover:text-gray-900 hover:font-bold">
                         Log in
                     </button>
 
                     <!--SIGN UP BUTTON-->
-                    <button class="text-sm font-bold text-black-900 bg-blue-400 rounded-xl hover:bg-red-500">
+                    <button class="text-lg font-bold text-black bg-blue-400 rounded-xl hover:bg-red-500 mb-3">
                         Sign up
                     </button>
                 </div>
@@ -106,24 +110,29 @@
 
               <!--DIV FOR NAV LINKS-->
               <div class="hidden md:flex items-center justify-between gap-16">
-                <a class="" href="#what">What we offer</a>
-                <a class="" href="#features">Safety</a>
-                <a class="" href="#where">Where to Ride</a>
-                <a class="" href="#Forum">Forum</a>
-                <a class="" href="#contact_us">Contact us</a>
+                <a class="text-m text-black" href="#What-weDo">
+                  What we offer</a>
+                <a class="text-m text-black" href="#Safety">
+                  Safety</a>
+                <a class="text-m text-black" href="#whereToRide">
+                  Where to Ride</a>
+                <a class="text-m text-black" href="#forum">
+                  Forum</a>
+                <a class="text-m text-black" href="#contactUs">
+                  Contact us</a>
               </div>
 
 
               <!--DIV FOR BUTTONS-->
-              <div class="hidden gap-8 p-4 items-center md:flex">
+              <div class="hidden md:flex gap-8 p-4 items-center">
 
                   <!--LOG IN BUTTON-->
-                  <button class="text-sm text-black-900 hover:text-dark-grey-900 hover:font-bold">
+                  <button class="text-sm text-black hover:text-gray-900 hover:font-bold">
                       Log in
                   </button>
 
                   <!--SIGN UP BUTTON-->
-                  <button class="px-4 py-2 text-sm font-bold text-black-900 bg-blue-400 rounded-xl hover:bg-red-500">
+                  <button class="px-4 py-2 text-sm font-bold text-black bg-blue-400 rounded-xl hover:bg-red-500">
                       Sign up
                   </button>
               </div>
@@ -136,28 +145,28 @@
 
     
     <!--What we offer-->
-    <div id="What" class="container grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-16">
+    <div id="What-weDo" class="container grid w-full grid-cols-1 md:grid-cols-2 gap-8 items-center p-16">
 
-      <div>
+      <span>
         <img src="Images\what_we_do_img.png">
-      </div>
+      </span>
 
 
-      <div>
+      <div class="container items-center grid grid-cols-1 md:grid-cols-2 gap-8 ">
         <div class="items-center flex flex-col flex-wrap">
-          <h1 class="font-bold text-xl">
+          <h3 class="font-bold text-xl text-gray-900">
             Day Group Ride planning
-          </h1>
-          <p class="font-semibold">
+          </h3>
+          <p class="font-semibold text-blue-900">
             We plan group rides for you and your buddies to your specifications. We have preplanned routes available and can be tailored to how you want it.
           </p>
         </div>
   
         <div class= "items-center flex flex-col flex-wrap">
-          <h1 class="font-bold text-xl">
+          <h3 class="font-bold text-xl text-gray-900">
             Domestic and transAfrica Overland Ride planning
-          </h1>
-          <p class="font-semibold">
+          </h3>
+          <p class="font-semibold text-blue-900">
             We have all inclusive overland rides on offer. From where to stop for fuel to where to sleep we take care of it all.
           </p>
         </div>
