@@ -10,3 +10,12 @@ a{
     cursor:pointer;
 
 }
+
+input{
+    border: 4px rgb(61, 61, 61);
+    border-radius: 4px;
+    background-color: rgb(235, 235, 235);
+    width: 15rem;
+    padding:1.5px;
+
+}
